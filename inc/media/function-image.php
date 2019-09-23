@@ -215,3 +215,15 @@ function aucor_starter_get_possible_image_sizes($desired_sizes, $generated_sizes
 
 }
 
+/**
+ * Get assets in template
+ *
+ * @param string $filename name of file
+ * @param string $type file found in fonts/images/scripts/sprite/styles
+ *
+ * @return string url of file
+ */
+function aucor_starter_get_assets_in_template($filename, $type) {
+  return get_stylesheet_directory_uri() . '/dist/' . $type . '/' . $filename;
+}
+
