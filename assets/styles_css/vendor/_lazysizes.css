@@ -1,0 +1,40 @@
+/* ==========================================================================
+ # Lazyloading via lazysizes
+========================================================================== */
+
+/* lazyload from transparent to visible */
+img.lazyload--fast {
+  transition: .15s ease-in-out;
+}
+img.lazyload--fast.lazyload,
+img.lazyload--fast.lazyloading {
+    opacity: 0;
+}
+img.lazyload--fast.lazyloaded {
+  opacity: 1;
+}
+
+/* lazyload from blurry to visible */
+img.lazyload--animated {
+  transition: .15s ease-in-out;
+}
+img.lazyload--animated.lazyload,
+img.lazyload--animated.lazyloading,
+img.lazyload--animated.lazyloaded {
+  opacity: 1;
+}
+img.lazyload--animated.lazyload-preload {
+  backface-visibility: hidden;
+  filter: url('#svg-effects-blur');
+  transition: .5s ease-out;
+  z-index: 3;
+}
+img.lazyload--animated.lazyload-preload.lazyload-preload--ready {
+  opacity: 0;
+}
+
+/* hide js depended images if there's no js */
+.no-js .lazyload,
+.no-js .lazyload-preload {
+  display: none !important;
+}
