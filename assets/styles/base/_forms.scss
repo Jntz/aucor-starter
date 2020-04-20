@@ -52,6 +52,7 @@ input[type="submit"] {
 /* Buttons
 ----------------------------------------------- */
 
-.button {
+.button,
+.btn {
   @include button;
 }

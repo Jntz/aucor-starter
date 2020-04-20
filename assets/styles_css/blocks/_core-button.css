@@ -1,0 +1,91 @@
+/* ==========================================================================
+ # Button block
+========================================================================== */
+
+/* Front-end and back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper .wp-block-buttons,
+.wysiwyg .wp-block-buttons {
+
+}
+
+.editor-styles-wrapper .wp-block-button,
+.wysiwyg .wp-block-button {
+
+  &__link {
+    @include button;
+    @include button--big;
+  }
+
+}
+
+.editor-styles-wrapper .wp-block-button__link,
+.wysiwyg .wp-block-button__link {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+  transition: all .2s ease-in-out;
+
+  background: var(--primary);
+  border-radius: 5rem;
+  color: var(--white);
+  display: inline-block;
+  font-size: .875rem;
+  font-weight: var(--bold);
+  line-height: 1.25;
+  padding: var(--gap-small) var(--gap);
+  text-decoration: none;
+  vertical-align: baseline;
+}
+.editor-styles-wrapper .wp-block-button__link:hover,
+.editor-styles-wrapper .wp-block-button__link:focus,
+.editor-styles-wrapper .wp-block-button__link:active,
+.wysiwyg .wp-block-button__link:hover,
+.wysiwyg .wp-block-button__link:focus,
+.wysiwyg .wp-block-button__link:active {
+  background: var(--primary);
+  transform: translateY(-.125rem);
+}
+
+.editor-styles-wrapper .wp-block-button__link:focus,
+.wysiwyg .wp-block-button__link:focus {
+  outline: 1px dotted;
+}
+
+@media (min-width: var(--s)) {
+  .editor-styles-wrapper .wp-block-button__link,
+  .wysiwyg .wp-block-button__link {
+    font-size: 1rem;
+  }
+}
+
+/* Only front-end
+----------------------------------------------- */
+
+.wysiwyg .wp-block-buttons {
+
+}
+
+.wysiwyg .wp-block-button {
+
+}
+
+/* Only back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper .wp-block-buttons {
+
+}
+
+.editor-styles-wrapper .wp-block-button {
+
+}

@@ -1,0 +1,144 @@
+/* ==========================================================================
+ # Forms
+========================================================================== */
+
+/* Generic form styles
+----------------------------------------------- */
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 1rem;
+  border: 0;
+  text-transform: none;
+}
+
+label {
+  max-width: 100%;
+}
+
+select,
+textarea,
+input {
+  max-width: 100%;
+  padding: .5rem 1rem;
+  color: var(--base-font-color);
+  background: var(--white);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: .25rem 0 0;
+  line-height: normal;
+}
+
+textarea {
+  height: 15rem;
+}
+
+form button,
+input[type="submit"] {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+  transition: all .2s ease-in-out;
+  background: var(--primary);
+  border-radius: 5rem;
+  color: var(--white);
+  display: inline-block;
+  font-size: .875rem;
+
+  font-weight: var(--bold);
+  line-height: 1.25;
+  padding: var(--gap-small) var(--gap);
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+form button:hover,
+input[type="submit"]:hover,
+form button:focus,
+input[type="submit"]:focus,
+form button:active,
+input[type="submit"]:active {
+  background: var(--primary);
+  transform: translateY(-.125rem);
+}
+
+form button:focus,
+input[type="submit"]:focus {
+  outline: 1px dotted;
+}
+
+@media (min-width: var(--s)) {
+  form button,
+  input[type="submit"] {
+    font-size: 1rem;
+  }
+}
+
+/* Buttons
+----------------------------------------------- */
+
+.button,
+.btn {
+  /* include button reset */
+  background: none;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+
+  /* include transtiion */
+  transition: all .2s ease-in-out;
+  background: var(--primary);
+  border-radius: 5rem;
+  color: var(--white);
+  display: inline-block;
+  font-size: .875rem;
+
+  font-weight: var(--bold);
+  line-height: 1.25;
+  padding: var(--gap-small) var(--gap);
+  text-decoration: none;
+  vertical-align: baseline;
+}
+.button:hover, .button:focus, .button:active,
+.btn:hover, .btn:focus, .btn:active {
+  background: var(--primary);
+  transform: translateY(-.125rem);
+}
+
+button:focus,
+btn:focus {
+  outline: 1px dotted;
+}
+
+@media(min-width: var(--s)) {
+  .button,
+  .btn {
+    font-size: 1rem;
+  }
+}

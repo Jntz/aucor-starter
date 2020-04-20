@@ -1,0 +1,83 @@
+/* ==========================================================================
+ # File block
+========================================================================== */
+
+/* Front-end and back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper .wp-block-file,
+.wysiwyg .wp-block-file {
+
+  // multiple files
+  & + .wp-block-file {
+    margin-top: $gap-small;
+  }
+
+  // extra download button
+  &__button {
+    @include button;
+    margin-left: $gap-small;
+  }
+
+}
+
+.editor-styles-wrapper .wp-block-file + .wp-block-file,
+.wysiwyg .wp-block-file + .wp-block-file {
+  margin-top: var(--gap-small);
+}
+
+.editor-styles-wrapper .wp-block-file__button,
+.wysiwyg .wp-block-file__button {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+    transition: all .2s ease-in-out;
+    background: var(--primary);
+    border-radius: 5rem;
+    color: var(--white);
+    display: inline-block;
+    font-size: .875rem;
+    font-weight: var(--bold);
+    line-height: 1.25;
+    padding: var(--gap-small) var(--gap);
+    text-decoration: none;
+    vertical-align: baseline;
+}
+
+.editor-styles-wrapper .wp-block-file__button:hover,
+.wysiwyg .wp-block-file__button:hover,
+.editor-styles-wrapper .wp-block-file__button:focus,
+.wysiwyg .wp-block-file__button:focus,
+.editor-styles-wrapper .wp-block-file__button:active,
+.wysiwyg .wp-block-file__button:active {
+  background: var(--primary);
+  transform: translateY(-.125rem);
+}
+
+@media (min-width: var(--s)) {
+  .editor-styles-wrapper .wp-block-file__button,
+  .wysiwyg .wp-block-file__button {
+    font-size: 1rem;
+  }
+}
+/* Only front-end
+----------------------------------------------- */
+
+.wysiwyg .wp-block-file {
+
+}
+
+/* Only back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper .wp-block-file {
+
+}

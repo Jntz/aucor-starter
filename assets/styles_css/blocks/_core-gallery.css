@@ -1,0 +1,48 @@
+/* ==========================================================================
+ # Gallery block
+========================================================================== */
+
+/* Front-end and back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper .wp-block-gallery,
+.wysiwyg .wp-block-gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  margin: var(--gap) auto;
+}
+
+.editor-styles-wrapper .wp-block-gallery.alignwide,
+.wysiwyg .wp-block-gallery.alignwide,
+.editor-styles-wrapper .wp-block-gallery.alignfull,
+.wysiwyg .wp-block-gallery.alignfull {
+  grid-gap: var(--gap);
+}
+
+.editor-styles-wrapper .wp-block-gallery.is-cropped .blocks-gallery-item figcaption,
+.wysiwyg .wp-block-gallery.is-cropped .blocks-gallery-item figcaption {
+  padding: var(--gap-big) var(--gap-tiny) var(--gap-tiny);
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  color: var(--white);
+  font-size: .875rem;
+  background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0, 0));
+}
+
+/* Only front-end
+----------------------------------------------- */
+
+.wysiwyg .wp-block-gallery {
+
+}
+
+/* Only back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper .wp-block-gallery {
+
+}

@@ -1,0 +1,129 @@
+/* ==========================================================================
+ # Media
+========================================================================== */
+
+/* Images
+----------------------------------------------- */
+
+.wp-caption {
+  float: none;
+  font-size: .875rem;
+  margin: 0;
+  max-width: 100%;
+}
+
+.alignnone {
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+
+}
+
+.aligncenter {
+  display: block;
+  height: auto;
+  margin: 1rem auto;
+}
+
+/* Icons
+----------------------------------------------- */
+
+.icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 1.5rem;
+  vertical-align: middle;
+  width:  1.5rem;
+}
+
+/* Iframe
+----------------------------------------------- */
+
+iframe {
+  max-width: 100%;
+}
+
+/* Gallery (legacy)
+----------------------------------------------- */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.gallery img {
+  display: block;
+  line-height: 0;
+}
+
+.gallery-item {
+  margin: 0;
+  padding: .5rem 0;
+  width: 100%;
+}
+
+.gallery-columns-2 .gallery-item,
+.gallery-columns-3 .gallery-item,
+.gallery-columns-4 .gallery-item {
+  width: 100%;
+}
+
+@media (min-width: var(--s)) {
+  .gallery-columns-2 .gallery-item {
+    margin-right: 1rem;
+    width: calc(50% - 1rem);
+  }
+
+  .gallery-columns-3 .gallery-item {
+    margin-right: 1rem;
+    width: calc(50% - 1rem);
+
+  }
+  .gallery-columns-3 .gallery-item:nth-of-type(2n),
+  .gallery-columns-2 .gallery-item:nth-of-type(2n),
+  .gallery-columns-4 .gallery-item:nth-of-type(2n) {
+    margin-right: 0;
+  }
+
+  .gallery-columns-4 .gallery-item {
+    margin-right: 1rem;
+    width: calc(50% - 1rem);
+  }
+
+}
+@media (min-width: var(--m)) {
+  .gallery-columns-3 .gallery-item {
+    margin-right: 1rem;
+    width: calc(33.33% - 1rem);
+  }
+  .gallery-columns-4 .gallery-item {
+    margin-right: 1rem;
+    width: calc(33.33% - 1rem);
+  }
+
+  .gallery-columns-3 .gallery-item:nth-of-type(2n),
+  .gallery-columns-4 .gallery-item:nth-of-type(2n) {
+    margin-right: 1rem;
+  }
+  .gallery-columns-3 .gallery-item:nth-of-type(3n),
+  .gallery-columns-4 .gallery-item:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}
+@media (min-width: var(--l)) {
+  .gallery-columns-4 .gallery-item {
+    margin-right: 1rem;
+    width: calc(25% - 1rem);
+  }
+
+  .gallery-columns-4 .gallery-item:nth-of-type(2n),
+  .gallery-columns-4 .gallery-item:nth-of-type(3n) {
+    margin-right: 1rem;
+  }
+
+  .gallery-columns-4 .gallery-item:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
