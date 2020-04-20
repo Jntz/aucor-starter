@@ -1,0 +1,33 @@
+/* ==========================================================================
+ # Block colors
+========================================================================== */
+
+/* white */
+.has-white-background-color {
+  background: var(--white);
+}
+
+.has-white-color,
+.has-white-color a {
+  color: var(--white);
+}
+
+/* black */
+.has-black-background-color {
+  background: var(--base-font-color);
+}
+
+.has-black-color,
+.has-black-color a {
+  color: var(--base-font-color);
+}
+
+/* primary */
+.has-primary-background-color {
+  background: var(--primary);
+}
+
+.has-primary-color,
+.has-primary-color a {
+  color: var(--primary);
+}

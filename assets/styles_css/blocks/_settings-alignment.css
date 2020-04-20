@@ -1,0 +1,116 @@
+/* ==========================================================================
+ # Block alignment
+========================================================================== */
+
+/* Only front-end
+----------------------------------------------- */
+
+.wysiwyg {
+  padding-left:  var(--gap);
+  padding-right: var(--gap);
+}
+
+.wysiwyg > :first-child {
+  margin-top: 0;
+}
+.wysiwyg > :last-child {
+  margin-bottom: 0;
+}
+
+.wysiwyg:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+.wysiwyg > .is-first-block {
+  margin-top: 1.5rem;
+}
+
+.has-no-hero-background .wysiwyg > .is-first-block {
+  margin-top: 1.5rem;
+}
+
+.wysiwyg > .is-last-block {
+  margin-bottom: 1.5rem;
+}
+
+/* each block takes care of its own width */
+.wysiwyg > *,
+.wp-block-group__inner-container > * {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left:  auto;
+  margin-right: auto;
+  max-width: var(--content-default-width);
+}
+
+.wysiwyg .alignfull {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: -var(--gap);
+  margin-right: -var(--gap);
+  max-width: none;
+}
+
+.wysiwyg .alignwide {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  max-width: var(--max-width-l);
+}
+
+@media (min-width: var(--s)) {
+  .wysiwyg > .is-first-block,
+  .has-no-hero-background .wysiwyg > .is-first-block,
+  .wysiwyg .alignwide.is-first-block {
+    margin-top: 3rem;
+  }
+
+  .wysiwyg > .is-last-block,
+  .wysiwyg .alignwide.is-last-block {
+    margin-bottom: 3rem;
+  }
+
+  .wysiwyg .alignfull,
+  .wysiwyg .alignwide {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  /* float left tweaks */
+  .wysiwyg .alignleft {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+@media (min-width: var(--m)) {
+
+}
+@media (min-width: var(--l)) {
+  .wysiwyg > .is-first-block,
+  .wysiwyg .alignwide.is-first-block {
+    margin-top: 4rem;
+  }
+
+  .wysiwyg > .is-last-block,
+  .wysiwyg .alignwide.is-last-block {
+    margin-bottom: 4rem;
+  }
+
+  .wysiwyg .alignfull {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media(max-width: 719px) {
+  /* float right tweaks */
+  .wysiwyg .alignright {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

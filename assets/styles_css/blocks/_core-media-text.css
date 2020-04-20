@@ -1,0 +1,115 @@
+/* ==========================================================================
+ # Media-text block
+========================================================================== */
+
+/* Front-end and back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper .wp-block-media-text,
+.wysiwyg .wp-block-media-text {
+
+}
+
+/* Only front-end
+----------------------------------------------- */
+
+.wysiwyg .wp-block-media-text {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 0;
+}
+
+/* text container */
+.wysiwyg .wp-block-media-text__content {
+  width: 100%;
+  margin-top: var(--gap);
+  padding: 0;
+}
+
+.wysiwyg .wp-block-media-text__content > :first-child {
+  margin-top: 0;
+}
+.wysiwyg .wp-block-media-text__content > :last-child {
+  margin-bottom: 0;
+}
+
+.wysiwyg .wp-block-media-text__content > * {
+  max-width: calc(var(--max-width-l) / 2);
+}
+
+.wysiwyg .wp-block-media-text__content h2 {
+  font-size: 1.75rem;
+}
+
+
+/* image */
+.wysiwyg .wp-block-media-text__media {
+  margin: 0;
+  padding: 0;
+}
+
+.wysiwyg .wp-block-media-text__media img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/*/ add side padding for full width */
+.wysiwyg .wp-block-media-text.alignfull .wp-block-media-text__content {
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+}
+
+@media (min-width: var(--s)) {
+  .wysiwyg .wp-block-media-text.alignwide .wp-block-media-text__content {
+    padding: var(--gap-big);
+  }
+}
+
+@media (min-width: var(--m)) {
+
+  .wysiwyg .wp-block-media-text__content {
+    width: 50%;
+    margin-top: 0;
+    padding: var(--gap);
+  }
+
+  .wysiwyg .wp-block-media-text__media {
+    width: 50%;
+    flex-shrink: 0;
+  }
+
+  /* alignment right */
+  .wysiwyg .wp-block-media-text.has-media-on-the-right .wp-block-media-text__media {
+    order: 1;
+  }
+
+  .wysiwyg .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content > * {
+      margin-left: auto;
+  }
+
+  .wysiwyg .wp-block-media-text.alignfull .wp-block-media-text__content {
+    padding: var(--gap-big);
+  }
+
+
+}
+
+@media (min-width: var(--xl)) {
+  .wysiwyg .wp-block-media-text.alignfull .wp-block-media-text__content {
+    padding-left: calc((50vw - var(--max-width-l )/ 2) / 2);
+    padding-right: calc((50vw - var(--max-width-l) / 2) / 2);
+  }
+}
+
+
+
+/* Only back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper .wp-block-media-text {
+
+}
+

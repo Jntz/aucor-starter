@@ -1,0 +1,75 @@
+/* ==========================================================================
+ # Quote block
+========================================================================== */
+
+/* Front-end and back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper .wp-block-quote,
+.wysiwyg .wp-block-quote,
+.wysiwyg blockquote:not([class]) {
+  border-left: .25rem solid var(--primary);
+  margin: var(--gap) auto;
+  padding-left: var(--gap);
+}
+
+.editor-styles-wrapper .wp-block-quote p,
+.wysiwyg .wp-block-quote p,
+.wysiwyg blockquote:not([class]) p {
+  font-size: .875rem;
+  margin: 0;
+}
+
+.editor-styles-wrapper .wp-block-quote cite,
+.wysiwyg .wp-block-quote cite,
+.wysiwyg blockquote:not([class]) cite,
+.editor-styles-wrapper .wp-block-quote .wp-block-quote__citation,
+.wysiwyg .wp-block-quote .wp-block-quote__citation,
+.wysiwyg blockquote:not([class]) .wp-block-quote__citation {
+  display: block;
+  font-style: normal;
+  margin-top: var(--gap-small);
+  color: var(--grey-font-color);
+  font-size: .875rem;
+}
+
+@media (min-width: var(--s)) {
+  .editor-styles-wrapper .wp-block-quote p,
+  .wysiwyg .wp-block-quote p,
+  .wysiwyg blockquote:not([class]) p {
+    font-size: 1rem;
+  }
+
+  .editor-styles-wrapper .wp-block-quote cite,
+  .wysiwyg .wp-block-quote cite,
+  .wysiwyg blockquote:not([class]) cite,
+  .editor-styles-wrapper .wp-block-quote .wp-block-quote__citation,
+  .wysiwyg .wp-block-quote .wp-block-quote__citation,
+  .wysiwyg blockquote:not([class]) .wp-block-quote__citation {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: var(--m)) {
+  .editor-styles-wrapper .wp-block-quote p,
+  .wysiwyg .wp-block-quote p,
+  .wysiwyg blockquote:not([class]) p {
+    font-size: 1.125rem;
+  }
+}
+
+
+
+/* Only front-end
+----------------------------------------------- */
+
+.wysiwyg .wp-block-quote, .wysiwyg blockquote:not([class]) {
+
+}
+
+/* Only back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper .wp-block-quote {
+
+}

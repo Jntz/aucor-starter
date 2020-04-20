@@ -1,0 +1,138 @@
+/* ==========================================================================
+ # Table block
+========================================================================== */
+
+/* Front-end and back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper .wp-block-table,
+.wysiwyg .wp-block-table {
+  font-size: .875rem;
+  margin: var(--gap) auto;
+  width: 100%;
+}
+
+.editor-styles-wrapper .wp-block-table figure,
+.wysiwyg .wp-block-table figure {
+  margin: 0;
+}
+
+.editor-styles-wrapper .wp-block-table table,
+.wysiwyg .wp-block-table table {
+  border: 1px solid var(--grey);
+  width: 100%;
+}
+
+.editor-styles-wrapper .wp-block-table thead,
+.wysiwyg .wp-block-table thead {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.editor-styles-wrapper .wp-block-table td,
+.wysiwyg .wp-block-table td,
+th.editor-styles-wrapper .wp-block-table th,
+.wysiwyg .wp-block-table th {
+  text-align: left;
+  min-width: 8rem;  /* for responsive tables */
+  padding: var(--gap-small) var(--gap-small);
+}
+
+.editor-styles-wrapper .wp-block-table td,
+.wysiwyg .wp-block-table td {
+  border: 0;
+  border-left: 1px solid var(--grey);
+}
+
+.editor-styles-wrapper .wp-block-table td:first-of-type,
+.wysiwyg .wp-block-table td:first-of-type {
+  border-left: 0;
+}
+
+.editor-styles-wrapper .wp-block-table tr,
+.wysiwyg .wp-block-table tr {
+  border-bottom: 1px solid var(--grey);
+}
+
+.editor-styles-wrapper .wp-block-table tr:last-of-type,
+.wysiwyg .wp-block-table tr:last-of-type {
+  border-bottom: 0;
+}
+
+.editor-styles-wrapper .wp-block-table figcaption,
+.wysiwyg .wp-block-table figcaption {
+  margin-top: 1rem;
+}
+
+.editor-styles-wrapper .wp-block-table--responsive,
+.wysiwyg .wp-block-table--responsive {
+  display: block;
+  overflow-x: auto;
+  border: 1px solid var(--grey);
+  /* scroll indicator, @see https://www.smashingmagazine.com/2019/01/table-design-patterns-web/#style-the-scroll*/
+  background:
+      linear-gradient(to right, var(--white) 30%, rgba(255,255,255,0)),
+      linear-gradient(to right, rgba(255,255,255,0), var(--white) 70%) 0 100%,
+      radial-gradient(farthest-side at 0% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)),
+      radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: var(--white);
+  background-size: 2.5rem 100%, 2.5rem 100%, .875rem 100%, .875rem 100%;
+  background-position: 0 0, 100%, 0 0, 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+.editor-styles-wrapper .wp-block-table--responsive table,
+.wysiwyg .wp-block-table--responsive table {
+  min-width: 100%;
+  border: 0;
+}
+
+.editor-styles-wrapper .wp-block-table.alignfull,
+.wysiwyg .wp-block-table.alignfull {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.editor-styles-wrapper .wp-block-table.has-fixed-layout,
+.wysiwyg .wp-block-table.has-fixed-layout,
+.editor-styles-wrapper .wp-block-table.has-fixed-layout table,
+.wysiwyg .wp-block-table.has-fixed-layout table {
+  table-layout: fixed;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: var(--s)) {
+  .editor-styles-wrapper .wp-block-table,
+  .wysiwyg .wp-block-table {
+    font-size: 1rem;
+  }
+
+  .editor-styles-wrapper .wp-block-table.alignfull td,
+  .wysiwyg .wp-block-table.alignfull td {
+    padding: var(--gap);
+  }
+}
+@media (min-width: var(--content-fits)) {
+  .editor-styles-wrapper .wp-block-table.alignleft,
+  .wysiwyg .wp-block-table.alignleft,
+  .editor-styles-wrapper .wp-block-table.alignright,
+  .wysiwyg .wp-block-table.alignright {
+    max-width: var(--content-default-width) / 2 ;
+  }
+}
+
+
+/* Only front-end
+----------------------------------------------- */
+
+.wysiwyg .wp-block-table {
+
+}
+
+/* Only back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper .wp-block-table {
+
+}

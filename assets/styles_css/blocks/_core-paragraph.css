@@ -1,0 +1,32 @@
+/* ==========================================================================
+ # Paragraph block
+========================================================================== */
+
+/* Front-end and back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper .wp-block-paragraph,
+.wysiwyg .wp-block-paragraph {
+
+}
+
+.editor-styles-wrapper .wp-block-paragraph.has-background,
+.wysiwyg .wp-block-paragraph.has-background {
+  display: block;
+  padding: var(--gap);
+}
+
+/* Only front-end
+----------------------------------------------- */
+
+.wysiwyg .wp-block-paragraph {
+
+}
+
+/* Only back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper .wp-block-paragraph {
+  line-height: var(--line-height);
+}
+

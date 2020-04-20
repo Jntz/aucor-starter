@@ -1,0 +1,45 @@
+/* ==========================================================================
+ # List block
+========================================================================== */
+
+/* Front-end and back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper ul.editor-rich-text__tinymce,
+.editor-styles-wrapper ol.editor-rich-text__tinymce,
+.wysiwyg .wp-block-list {
+  padding-left: var(--gap);
+}
+
+.editor-styles-wrapper ul.editor-rich-text__tinymce li,
+.editor-styles-wrapper ol.editor-rich-text__tinymce li,
+.wysiwyg .wp-block-list li {
+  margin: .25rem 0;
+  padding: 0;
+}
+
+/* inner lists */
+.editor-styles-wrapper ul.editor-rich-text__tinymce ul,
+.editor-styles-wrapper ol.editor-rich-text__tinymce ul,
+.wysiwyg .wp-block-list ul,
+.editor-styles-wrapper ul.editor-rich-text__tinymce ol,
+.editor-styles-wrapper ol.editor-rich-text__tinymce ol,
+.wysiwyg .wp-block-list ol {
+  margin: var(--gap-tiny) 0;
+}
+
+/* Only front-end
+----------------------------------------------- */
+
+.wysiwyg .wp-block-list {
+
+}
+
+/* Only back-end
+----------------------------------------------- */
+
+.editor-styles-wrapper ul.editor-rich-text__tinymce,
+.editor-styles-wrapper ol.editor-rich-text__tinymce {
+
+}
+
